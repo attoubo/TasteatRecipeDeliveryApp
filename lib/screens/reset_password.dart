@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
-class RegistrationScreen extends StatefulWidget {
+
+class ResetPasswordScreen extends StatefulWidget {
   @override
-  _RegistrationScreenState createState() => _RegistrationScreenState();
+  _ResetPasswordScreenState createState() => _ResetPasswordScreenState();
 }
 
 
-class _RegistrationScreenState extends State<RegistrationScreen>{
-
+class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Registration'),
+        title: const Text('Log in'),
         backgroundColor: const Color.fromRGBO(255, 55, 55, 1.0),
       ),
       backgroundColor: Colors.white,
@@ -22,9 +23,6 @@ class _RegistrationScreenState extends State<RegistrationScreen>{
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            const SizedBox(
-              height: 10.0,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -32,61 +30,46 @@ class _RegistrationScreenState extends State<RegistrationScreen>{
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    height: 180.0,
+                    height: 100.0,
                   ),
                 )
               ],
             ),
             const SizedBox(
-              height: 20.0,
+              height: 40.0,
+            ),
+            // const Center(
+            //   child:
+              const Text(
+                'Reset Password',
+                style: TextStyle(
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.w500,
+                  color: Color.fromRGBO(255, 55, 55, 1.0),
+                ),
+              ),
+            const SizedBox(
+              height: 4.0,
+            ),
+            const Text(
+              'Enter your user account verified email address and we will send you a password reset link.',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                color: Colors.black54,
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
-                  labelText: 'Name',
+                  labelText: 'Your Email',
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
-                  labelText: 'Email',
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
-                  labelText: 'Phone',
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
-                  labelText: 'Password',
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
-                  labelText: 'Confirm Password',
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 50.0),
+              padding: const EdgeInsets.symmetric(vertical: 25.0),
               child: Material(
                 elevation: 5.0,
                 color: const Color.fromRGBO(255, 55, 55, 1.0),
@@ -98,7 +81,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>{
                   minWidth: 200.0,
                   height: 42.0,
                   child: const Text(
-                    'Register',
+                    'Reset Password',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,

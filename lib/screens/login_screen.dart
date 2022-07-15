@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 40.0,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
@@ -57,8 +57,22 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
+            FlatButton(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
+                child: const Text(
+                  'Forgot Password ?',
+                  style: TextStyle(
+                      color: Color.fromRGBO(255, 55, 55, 1.0),
+                      fontSize: 16.0
+                  ),
+                ),
+              onPressed: () => {
+              //Go to reset password screen.
+              Navigator.pushNamed(context, '/reset_password'),
+              },
+            ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              padding: const EdgeInsets.symmetric(vertical: 25.0),
               child: Material(
                 elevation: 5.0,
                 color: const Color.fromRGBO(255, 55, 55, 1.0),

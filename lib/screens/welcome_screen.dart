@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/scheduler.dart' show timeDilation;
+
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -6,7 +9,25 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateMixin{
+
+  late AnimationController controller;
+  late Animation animation;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = AnimationController(duration: const Duration(seconds: 1), vsync: this, upperBound: 160.0);
+    controller.forward();
+
+    controller.addListener(() {
+      setState(() {});
+    });
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,19 +39,28 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Text(
-                  'TastEat',
-                  style: TextStyle(
-                    fontSize: 60.0,
-                    fontWeight: FontWeight.w900,
+                mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget> [
+                  AnimatedTextKit(
+                    animatedTexts: [
+                    TypewriterAnimatedText(
+                      'Tasteat',
+                      textStyle: const TextStyle(
+                        fontSize: 60.0,
+                        fontFamily: 'Agne',
+                        color: Color.fromRGBO(0, 0, 0, 0.8),
+                        letterSpacing: 3,
+                        fontWeight: FontWeight.w900,
+
+                      ),
+                      speed: const Duration(milliseconds: 250),
+                    ),
+                  ],
                   ),
-                ),
-              ],
+                ]
             ),
             const SizedBox(
-              height: 40.0,
+              height: 30.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -39,7 +69,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    height: 80.0,
+                    height: controller.value,
                   ),
                 )
               ],
@@ -95,8 +125,28 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
             ),
+            // const SizedBox(
+            //   height: 60.0,
+            // ),
+            // const Center(
+            //   child: Text(
+            //     'Cooking is easy and Eating is too exciting',
+            //     style: TextStyle(
+            //       color: Color.fromRGBO(255, 55, 55, 1.0),
+            //       fontSize: 16.0,
+            //       fontWeight: FontWeight.w500,
+            //     ),
+            //
+            //   ),
+            // ),
+             const Align(
+                alignment: FractionalOffset.bottomCenter,
+                child: Text('You can try'),
+              ),
+            // ),
           ],
         ),
+
       ),
     );
   }
