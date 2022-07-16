@@ -17,8 +17,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         backgroundColor: const Color.fromRGBO(255, 55, 55, 1.0),
       ),
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 100.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -36,7 +36,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               ],
             ),
             const SizedBox(
-              height: 40.0,
+              height: 80.0,
             ),
             // const Center(
             //   child:

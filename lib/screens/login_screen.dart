@@ -15,14 +15,14 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: const Color.fromRGBO(255, 55, 55, 1.0),
       ),
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 80.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             const SizedBox(
-              height: 40.0,
+              height: 0.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    height: 190.0,
+                    height: 180.0,
                   ),
                 )
               ],
@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 40.0,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             FlatButton(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
                 child: const Text(
                   'Forgot Password ?',
                   style: TextStyle(

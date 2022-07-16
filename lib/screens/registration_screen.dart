@@ -16,8 +16,8 @@ class _RegistrationScreenState extends State<RegistrationScreen>{
         backgroundColor: const Color.fromRGBO(255, 55, 55, 1.0),
       ),
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 40.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,

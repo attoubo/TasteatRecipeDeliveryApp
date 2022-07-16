@@ -125,6 +125,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                 ),
               ),
             ),
+
             // const SizedBox(
             //   height: 60.0,
             // ),
