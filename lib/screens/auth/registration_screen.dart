@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasteat_recipe_delivery_app/constants.dart';
 
 class RegistrationScreen extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>{
     return Scaffold(
       appBar: AppBar(
         title: const Text('Registration'),
-        backgroundColor: const Color.fromRGBO(255, 55, 55, 1.0),
+        backgroundColor: kUniversalAppRed,
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -89,7 +90,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>{
               padding: const EdgeInsets.symmetric(vertical: 50.0),
               child: Material(
                 elevation: 5.0,
-                color: const Color.fromRGBO(255, 55, 55, 1.0),
+                color: kUniversalAppRed,
                 borderRadius: BorderRadius.circular(15.0),
                 child: MaterialButton(
                   onPressed: () {
@@ -99,11 +100,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>{
                   height: 42.0,
                   child: const Text(
                     'Register',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 22.0,
-                    ),
+                    style: kAuthButtonTextStyle,
                   ),
                 ),
               ),

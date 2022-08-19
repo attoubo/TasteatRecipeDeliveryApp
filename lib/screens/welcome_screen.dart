@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
+import 'package:tasteat_recipe_delivery_app/constants.dart';
 
 
 class WelcomeScreen extends StatefulWidget {
@@ -8,9 +9,7 @@ class WelcomeScreen extends StatefulWidget {
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
-
 class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateMixin{
-
   late AnimationController controller;
   late Animation animation;
 
@@ -45,14 +44,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                     animatedTexts: [
                     TypewriterAnimatedText(
                       'Tasteat',
-                      textStyle: const TextStyle(
-                        fontSize: 60.0,
-                        fontFamily: 'Agne',
-                        color: Color.fromRGBO(0, 0, 0, 0.8),
-                        letterSpacing: 3,
-                        fontWeight: FontWeight.w900,
-
-                      ),
+                      textStyle: kAnimatedAppNameTextStyle,
                       speed: const Duration(milliseconds: 250),
                     ),
                   ],
@@ -81,7 +73,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
                 elevation: 5.0,
-                color: const Color.fromRGBO(255, 55, 55, 1.0),
+                color: kUniversalAppRed,
                 borderRadius: BorderRadius.circular(15.0),
                 child: MaterialButton(
                   onPressed: () {
@@ -92,11 +84,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                   height: 42.0,
                   child: const Text(
                     'Log In',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 22.0,
-                    ),
+                    style: kAuthButtonTextStyle,
                   ),
                 ),
               ),
@@ -104,7 +92,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
-                color: const Color.fromRGBO(255, 55, 55, 1.0),
+                color: kUniversalAppRed,
                 borderRadius: BorderRadius.circular(15.0),
                 elevation: 5.0,
                 child: MaterialButton(
@@ -116,30 +104,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                   height: 42.0,
                   child: const Text(
                     'Register',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 22.0,
-                    ),
+                    style: kAuthButtonTextStyle,
                   ),
                 ),
               ),
             ),
 
-            // const SizedBox(
-            //   height: 60.0,
-            // ),
-            // const Center(
-            //   child: Text(
-            //     'Cooking is easy and Eating is too exciting',
-            //     style: TextStyle(
-            //       color: Color.fromRGBO(255, 55, 55, 1.0),
-            //       fontSize: 16.0,
-            //       fontWeight: FontWeight.w500,
-            //     ),
-            //
-            //   ),
-            // ),
              const Align(
                 alignment: FractionalOffset.bottomCenter,
                 child: Text('You can try'),
@@ -147,7 +117,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
             // ),
           ],
         ),
-
       ),
     );
   }
