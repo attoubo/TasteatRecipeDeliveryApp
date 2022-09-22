@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tasteat_recipe_delivery_app/components/dish_search_bar.dart';
 import 'package:tasteat_recipe_delivery_app/components/bottom_navbar.dart';
-
+import 'package:tasteat_recipe_delivery_app/screens/favorite_screen.dart';
+import 'package:tasteat_recipe_delivery_app/screens/add_option_screen.dart';
+import 'package:tasteat_recipe_delivery_app/screens/search_screen.dart';
 import '../constants.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -250,7 +252,7 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
         // ],
       ),
-      bottomNavigationBar: BottomNavBar(),
+      // bottomNavigationBar: BottomNavBar(),
     );
   }
 }

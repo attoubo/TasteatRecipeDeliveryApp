@@ -8,7 +8,7 @@ import 'package:tasteat_recipe_delivery_app/constants.dart';
 
 
 class addOptionScreen extends StatefulWidget {
-  const addOptionScreen({Key? key}) : super(key: key);
+  // const addOptionScreen({Key? key}) : super(key: key);
 
   @override
   State<addOptionScreen> createState() => _addOptionScreenState();
@@ -21,7 +21,7 @@ class _addOptionScreenState extends State<addOptionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 60.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 55.0),
 
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +49,7 @@ class _addOptionScreenState extends State<addOptionScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Text(
-                      'Add new recipe ?',
+                      'Add new recipe',
                       style: TextStyle(
                         fontSize: 17.0,
                         fontWeight: FontWeight.w500,
@@ -113,12 +113,17 @@ class _addOptionScreenState extends State<addOptionScreen> {
                   ],
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
-
-      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
+// final screens = const [
+//   Center(child: Text('AddNew', style: TextStyle(fontSize: 60.0),),),
+//   Center(child: Text('Favorite', style: TextStyle(fontSize: 60.0),),),
+//   Center(child: Text('MainSearch', style: TextStyle(fontSize: 60.0),),),
+//   Center(child: Text('Gallery', style: TextStyle(fontSize: 60.0),),),
+//   Center(child: Text('Profile', style: TextStyle(fontSize: 60.0),),),
+// ];

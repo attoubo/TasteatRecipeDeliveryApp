@@ -9,7 +9,7 @@ import 'package:tasteat_recipe_delivery_app/constants.dart';
 
 
 class FavoriteScreen extends StatefulWidget {
-  const FavoriteScreen({Key? key}) : super(key: key);
+  // const FavoriteScreen({Key? key}) : super(key: key);
 
   @override
   State<FavoriteScreen> createState() => _FavoriteScreenState();
@@ -58,12 +58,11 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                     for (var i in text) const ReusableListCard(),
                   ],
                 ),
-
               ],
         ),
       ),
 
-      bottomNavigationBar: BottomNavBar(),
+      // bottomNavigationBar: BottomNavBar(),
     );
   }
 }

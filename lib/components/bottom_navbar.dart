@@ -1,50 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:tasteat_recipe_delivery_app/constants.dart';
+import 'package:tasteat_recipe_delivery_app/screens/add_option_screen.dart';
+import 'package:tasteat_recipe_delivery_app/screens/favorite_screen.dart';
+import 'package:tasteat_recipe_delivery_app/screens/search_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
-  static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: New',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Favorite',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Search',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Gallery',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 4: Profile',
-      style: optionStyle,
-    ),
-  ];
 
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  // final selectedIndex;
-  int _selectedIndex = 0;
+
+    int _selectedIndex = 0;
+  late List<Widget> _widgetOptions ;
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+
   }
+
+
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      iconSize: 30.0,
+      iconSize: 38.0,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.add_box),
@@ -65,6 +48,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         BottomNavigationBarItem(
           icon: Icon(Icons.person_outline),
           label: 'Profile',
+          // backgroundColor: kUniversalAppRed,
         ),
       ],
 
@@ -75,3 +59,27 @@ class _BottomNavBarState extends State<BottomNavBar> {
     );
   }
 }
+
+//:TODO selected item color don't work after setting bottom icon route ( must fix it !)
+
+
+
+
+//
+// switch(index){
+// case 0:
+// Navigator.push(context, MaterialPageRoute(
+// builder: (context) => const addOptionScreen())
+// );
+// break;
+// case 1:
+// Navigator.push(context, MaterialPageRoute(
+// builder: (context) => const FavoriteScreen())
+// );
+// break;
+// case 2:
+// Navigator.push(context, MaterialPageRoute(
+// builder: (context) => SearchScreen())
+// );
+// break;
+// }
