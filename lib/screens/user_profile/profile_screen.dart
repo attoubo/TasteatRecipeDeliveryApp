@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../constants.dart';
 
 
-
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
@@ -11,8 +10,15 @@ class ProfileScreen extends StatefulWidget {
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ProfileScreenState extends State<ProfileScreen> with SingleTickerProviderStateMixin {
   late int _counter = 0;
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: 2, vsync: this);
+    super.initState();
+  }
 
   void _incrementCounter () {
     setState(() {
@@ -63,24 +69,66 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         width: 130.0,
                       ),
                     ),
+                    const SizedBox(
+                      height: 15.0,
+                    ),
                     Row(
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
                         Text(
-                          'Profile',
+                          'User Name   ',
                           style: TextStyle(
                             fontSize: 25.0,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        Text(' '),
                         Icon(
-                          Icons.settings_outlined,
+                          Icons.edit_outlined,
                           color: kUniversalAppRed,
-                          size: 30.0,
+                          size: 40.0,
                         )
                       ],
-                    )
-                  ],
+                    ),
+                    Row(
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          'Chef - status',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black54
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 30.0,
+                    ),
+                    TabBar(
+                      unselectedLabelColor: Colors.black,
+                      labelColor: Colors.red,
+                      tabs: const [
+                        Tab(
+                          text: '1st tab',
+                        ),
+                        Tab(
+                          text: '2 nd tab',
+                        )
+                      ],
+                      controller: _tabController,
+                      indicatorSize: TabBarIndicatorSize.tab,
+                    ),
+                    Expanded(
+                      child: TabBarView(
+                        children: [
+                          Container(child: const Center(child: Text('people'))),
+                          const Text('Person')
+                        ],
+                        controller: _tabController,
+                      ),
+                    ),
+                    ],
                 )
               ],
             ),
@@ -94,5 +142,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: const Icon(Icons.add,),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
   }
 }
