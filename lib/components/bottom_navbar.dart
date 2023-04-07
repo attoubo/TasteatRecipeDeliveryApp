@@ -13,7 +13,7 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
 
     int _selectedIndex = 0;
-  late List<Widget> _widgetOptions ;
+  // late List<Widget> _widgetOptions ;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -24,9 +24,20 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
 
 
+    static final List<Widget> _widgetOptions = <Widget>[
+      addOptionScreen(),
+      FavoriteScreen(),
+      SearchScreen(),
+    ];
+
+
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
+    return Scaffold(
+        body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+    ),
+    bottomNavigationBar: BottomNavigationBar(
       iconSize: 38.0,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
@@ -56,6 +67,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       unselectedItemColor: Colors.black54,
       selectedItemColor: kUniversalAppRed,
       onTap: _onItemTapped,
+    )
     );
   }
 }

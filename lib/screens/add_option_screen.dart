@@ -60,7 +60,7 @@ class _addOptionScreenState extends State<addOptionScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    FlatButton(
+                    TextButton(
                         onPressed: null,
                         child: Icon(
                           Icons.add_box,
@@ -90,7 +90,7 @@ class _addOptionScreenState extends State<addOptionScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    FlatButton(
+                    TextButton(
                       onPressed: null,
                       child: Icon(
                         Icons.cloud_upload,

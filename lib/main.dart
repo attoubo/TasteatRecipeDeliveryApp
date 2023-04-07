@@ -11,6 +11,7 @@ import 'package:tasteat_recipe_delivery_app/screens/search_screen.dart';
 import 'package:tasteat_recipe_delivery_app/screens/add_option_screen.dart';
 import 'package:tasteat_recipe_delivery_app/screens/test.dart';
 import 'package:tasteat_recipe_delivery_app/components/bottom_navbar.dart';
+import 'package:tasteat_recipe_delivery_app/components/bottom_navbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       // home: WelcomeScreen(),
       initialRoute: '/',
       routes: {
-        '/': (context) => const MainTest(),
+        '/': (context) => BottomNavBar(),
         '/login_screen': (context) => LoginScreen(),
         '/registration_screen': (context) => RegistrationScreen(),
         '/reset_password': (context) => ResetPasswordScreen(),
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({super.key});
+  // const MyStatefulWidget({super.key});
 
   @override
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();

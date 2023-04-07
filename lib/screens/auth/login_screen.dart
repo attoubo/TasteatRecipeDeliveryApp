@@ -58,8 +58,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            FlatButton(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+            TextButton(
+                // padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
                 child: const Text(
                   'Forgot Password ?',
                   style: TextStyle(
