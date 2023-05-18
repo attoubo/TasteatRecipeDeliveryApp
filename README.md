@@ -10,10 +10,6 @@ The project is not finish yet but you can have overview.
 
 ![Screenshot_20230518_183904](https://github.com/attoubo/TasteatRecipeDeliveryApp/assets/49050891/54100a32-738a-4158-9009-4f50ff23017b)
 
-![Screenshot_20230518_183834](https://github.com/attoubo/TasteatRecipeDeliveryApp/assets/49050891/9da4130b-0d3c-499c-a05c-1113517891be)
-
-![Screenshot_20230518_183808](https://github.com/attoubo/TasteatRecipeDeliveryApp/assets/49050891/0b89b345-03bf-4bc8-a2d7-42377da3adc9)
-
 ![Screenshot_20230518_183537](https://github.com/attoubo/TasteatRecipeDeliveryApp/assets/49050891/d6ef832a-5d6d-46d5-bb51-ce543386989c)
 
 ![Screenshot_20230518_183702](https://github.com/attoubo/TasteatRecipeDeliveryApp/assets/49050891/bcd43ff1-f654-4428-8297-cf85d962cb30)
