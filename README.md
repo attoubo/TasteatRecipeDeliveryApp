@@ -1,7 +1,7 @@
 # Tasteat_recipe_delivery_app
 
-> A recipe and delivery application project. The goal was to create a universal app for users, who does not know to cook, who wants to diversity their diet or who has little time. <br />
-The project is not finish yet but you can have overview.
+A recipe and delivery application project. The goal was to create a universal app for users, who does not know to cook, who wants to diversity their diet or who has little time.
+> The project is not finish yet but you can have overview. <br />
 
 
 ## Setup
