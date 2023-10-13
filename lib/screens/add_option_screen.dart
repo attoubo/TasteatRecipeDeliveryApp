@@ -41,7 +41,7 @@ class _addOptionScreenState extends State<addOptionScreen> {
               ],
             ),
             const SizedBox(
-              height: 90.0,
+              height: 60.0,
             ),
             Column(
               children: [
@@ -73,7 +73,7 @@ class _addOptionScreenState extends State<addOptionScreen> {
               ],
             ),
             const SizedBox(
-              height: 40.0,
+              height: 20.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -83,7 +83,7 @@ class _addOptionScreenState extends State<addOptionScreen> {
               ],
             ),
             const SizedBox(
-              height: 40.0,
+              height: 20.0,
             ),
             Column(
               children: [
@@ -104,7 +104,7 @@ class _addOptionScreenState extends State<addOptionScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Text(
-                      'Share video',
+                      'Upload video',
                       style: TextStyle(
                         fontSize: 17.0,
                         fontWeight: FontWeight.w500,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
+import '../constants.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+class GalleryScreen extends StatelessWidget {
+  const GalleryScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +15,12 @@ class ProfileScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Row(
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
                 Expanded(
                     child: Text(
-                        'Profile',
-                        style: TextStyle(
+                      'Gallery',
+                      style: TextStyle(
                         fontSize: 23.0,
                         fontWeight: FontWeight.w700,
                       ),
@@ -28,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 15.0, right: 15.0),
                   child: Icon(
-                    Icons.settings,
+                    Icons.photo_library_sharp,
                     size: 30.0,
                     color: kUniversalAppRed,
                   ),

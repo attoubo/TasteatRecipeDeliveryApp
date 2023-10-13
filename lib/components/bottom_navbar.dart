@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:tasteat_recipe_delivery_app/constants.dart';
 import 'package:tasteat_recipe_delivery_app/screens/add_option_screen.dart';
 import 'package:tasteat_recipe_delivery_app/screens/favorite_screen.dart';
+import 'package:tasteat_recipe_delivery_app/screens/galery_screen.dart';
 import 'package:tasteat_recipe_delivery_app/screens/search_screen.dart';
+import 'package:tasteat_recipe_delivery_app/screens/user_profile/profile_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
 
@@ -22,12 +24,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   }
 
-
-
     static final List<Widget> _widgetOptions = <Widget>[
       addOptionScreen(),
       FavoriteScreen(),
       SearchScreen(),
+      GalleryScreen(),
+      ProfileScreen(),
     ];
 
 
@@ -73,25 +75,3 @@ class _BottomNavBarState extends State<BottomNavBar> {
 }
 
 //:TODO selected item color don't work after setting bottom icon route ( must fix it !)
-
-
-
-
-//
-// switch(index){
-// case 0:
-// Navigator.push(context, MaterialPageRoute(
-// builder: (context) => const addOptionScreen())
-// );
-// break;
-// case 1:
-// Navigator.push(context, MaterialPageRoute(
-// builder: (context) => const FavoriteScreen())
-// );
-// break;
-// case 2:
-// Navigator.push(context, MaterialPageRoute(
-// builder: (context) => SearchScreen())
-// );
-// break;
-// }
