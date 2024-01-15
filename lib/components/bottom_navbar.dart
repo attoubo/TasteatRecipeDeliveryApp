@@ -74,4 +74,4 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 }
 
-//:TODO selected item color don't work after setting bottom icon route ( must fix it !)
+//:TODO selected item color don't work after setting bottom icon route ( must fix it !) done

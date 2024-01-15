@@ -3,7 +3,9 @@ import 'package:tasteat_recipe_delivery_app/constants.dart';
 import 'package:tasteat_recipe_delivery_app/screens/favorite_screen.dart';
 import 'package:tasteat_recipe_delivery_app/screens/galery_screen.dart';
 import 'package:tasteat_recipe_delivery_app/screens/test.dart';
+import 'package:tasteat_recipe_delivery_app/screens/testOne.dart';
 import 'package:tasteat_recipe_delivery_app/screens/user_profile/profile_screen.dart';
+import 'package:tasteat_recipe_delivery_app/screens/user_profile/profile_settings.dart';
 import 'package:tasteat_recipe_delivery_app/screens/welcome_screen.dart';
 import 'package:tasteat_recipe_delivery_app/screens/auth/login_screen.dart';
 import 'package:tasteat_recipe_delivery_app/screens/auth/registration_screen.dart';
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
       // home: WelcomeScreen(),
       initialRoute: '/',
       routes: {
-        '/': (context) => BottomNavBar(),
+        '/': (context) => ProfileScreen(),
         '/login_screen': (context) => LoginScreen(),
         '/registration_screen': (context) => RegistrationScreen(),
         '/reset_password': (context) => ResetPasswordScreen(),
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/favorite_screen': (context) => FavoriteScreen(),
         '/search_screen': (context) => SearchScreen(),
         '/profile_screen': (context) => ProfileScreen(),
+        '/profile_settings': (context) => ProfileSettingScreen()
       },
 
     );
